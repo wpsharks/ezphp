@@ -15,7 +15,7 @@ Evaluates PHP tags in Posts (of any kind, including Pages); and also in text wid
 
 == Description ==
 
-This plugin is VERY simple. There's only ONE configurable option. You can define this PHP constant inside your `/wp-config.php` file (optional).
+This plugin is VERY simple. There is only ONE configurable option. You can define this PHP constant inside your `/wp-config.php` file (optional).
 
 	define('EZPHP_EXCLUDED_POST_TYPES', ''); // A comma-delimited list of Post Types to exclude.
 
