@@ -19,7 +19,7 @@ This plugin is VERY simple. There is only ONE configurable option. You can defin
 
 	define('EZPHP_EXCLUDED_POST_TYPES', ''); // A comma-delimited list of Post Types to exclude.
 
-Example: if you don't want PHP tags evaluated in Posts, only in Pages.
+For example: if you don't want PHP tags evaluated in Posts, only in Pages.
 
 	define('EZPHP_EXCLUDED_POST_TYPES', 'post');
 
