@@ -8,7 +8,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Stable tag: 130922
-Requires at least: 3.2
+Requires at least: 3.3
 Tested up to: 3.7-alpha
 
 Evaluates PHP tags in Posts (of any kind, including Pages); and also in text widgets. A very lightweight plugin!
