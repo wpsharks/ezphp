@@ -7,7 +7,7 @@ Tags: post, pages, posts, code, php, eval, exec, eval php, exec php, easy php, e
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Stable tag: 130922
+Stable tag: 130924
 Requires at least: 3.3
 Tested up to: 3.7-alpha
 
@@ -23,9 +23,13 @@ For example, if you don't want PHP tags evaluated in Posts, only in Pages.
 
 	define('EZPHP_EXCLUDED_POST_TYPES', 'post');
 
+#### Quick Tip: Writing PHP Code into a Post/Page.
+
+You can use regular `<?php ?>` tags; OR you can use `[php][/php]` shortcode tags.
+
 #### Quick Tip: Writing PHP Code Samples?
 
-It is now possible to use `<!php !>` when writing code samples, to avoid having certain PHP tags evaulated. When you write `<!php !>`, it is translated into `<?php ?>` in the final output; but never actually evaluated by the internal PHP parser. Of course, it's ALSO possible to accomplish this with HTML entities; e.g. `&lt;?php ?&gt;`.
+Use `<!php !>` when writing code samples, to avoid having certain PHP tags evaulated. When you write `<!php !>`, it is translated into `<?php ?>` in the final output; but never actually evaluated by the internal PHP parser. Of course, it's ALSO possible to accomplish this with HTML entities; e.g. `&lt;?php ?&gt;`.
 
 == Installation ==
 
@@ -35,6 +39,11 @@ It is now possible to use `<!php !>` when writing code samples, to avoid having 
 3. Use PHP tags in your Posts/Pages/Widgets.
 
 == Changelog ==
+
+= v130924 =
+
+* Adding support for `[php][/php]` shortcode tags as an alternative to regular `<?php ?>` tags.
+* Improvements and optimizations that make ezPHP an even more lightweight plugin for PHP evaluation in WordPress®.
 
 = v130922 =
 
