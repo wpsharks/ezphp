@@ -17,13 +17,14 @@ Evaluates PHP tags in Posts (of any kind, including Pages); and also in text wid
 
 This plugin is VERY simple. There is only ONE configurable option. You can define this PHP constant inside your `/wp-config.php` file (optional).
 
-	define('EZPHP_EXCLUDED_POST_TYPES', ''); // A comma-delimited list of Post Types to exclude.
+	define('EZPHP_EXCLUDED_POST_TYPES', '');
+	// Comma-delimited list of Post Types to exclude.
 
 For example, if you don't want PHP tags evaluated in Posts, only in Pages.
 
 	define('EZPHP_EXCLUDED_POST_TYPES', 'post');
 
-#### Quick Tip: Writing PHP Code into a Post/Page.
+#### Writing PHP Code into a Post/Page or Text Widget.
 
 You can use regular `<?php ?>` tags; OR you can use `[php][/php]` shortcode tags.
 
