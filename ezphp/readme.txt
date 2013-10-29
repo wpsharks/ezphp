@@ -1,4 +1,4 @@
-=== ezPHP for WordPress® ===
+=== ezPHP for WordPress ===
 
 Contributors: WebSharks
 Donate link: http://www.s2member.com/donate/
