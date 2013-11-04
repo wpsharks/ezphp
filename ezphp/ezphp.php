@@ -1,20 +1,21 @@
 <?php
 /*
 Version: 130924
+Text Domain: ezphp
 Plugin Name: ezPHP
+
+Author: s2Member® / WebSharks, Inc.
+Author URI: http://www.s2member.com
+
 Plugin URI: http://www.s2member.com/kb/ezphp-plugin
 Description: Evaluates PHP tags in Posts (of any kind, including Pages); and also in text widgets. A very lightweight plugin!
-Author URI: http://www.s2member.com
-Author: s2Member® / WebSharks, Inc.
 */
+if(!defined('WPINC')) // MUST have WordPress.
+	exit('Do NOT access this file directly: '.basename(__FILE__));
 
-if(!defined('WPINC'))
-	exit('Please do NOT access this file directly.');
+if(!defined('EZPHP_EXCLUDED_POST_TYPES')) define('EZPHP_EXCLUDED_POST_TYPES', '');
 
-if(!defined('EZPHP_EXCLUDED_POST_TYPES'))
-	define('EZPHP_EXCLUDED_POST_TYPES', '');
-
-class ezphp
+class ezphp // PHP execution plugin for WordPress.
 {
 	public static $excluded_post_types = array();
 

@@ -1,15 +1,16 @@
-=== ezPHP for WordPress® ===
-
-Contributors: WebSharks
-Donate link: http://www.s2member.com/donate/
-Tags: post, pages, posts, code, php, eval, exec, eval php, exec php, easy php, ez php, variables
-
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+=== ezPHP for WordPress ===
 
 Stable tag: 130924
 Requires at least: 3.3
 Tested up to: 3.7-alpha
+Text Domain: ezphp
+
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Contributors: WebSharks
+Donate link: http://www.s2member.com/donate/
+Tags: post, pages, posts, code, php, eval, exec, eval php, exec php, easy php, ez php, variables
 
 Evaluates PHP tags in Posts (of any kind, including Pages); and also in text widgets. A very lightweight plugin!
 
