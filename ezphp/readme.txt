@@ -9,7 +9,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Contributors: WebSharks
-Donate link: http://www.s2member.com/donate/
+Donate link: http://www.websharks-inc.com/r/wp-theme-plugin-donation/
 Tags: post, pages, posts, code, php, eval, exec, eval php, exec php, easy php, ez php, variables
 
 Evaluates PHP tags in Posts (of any kind, including Pages); and also in text widgets. A very lightweight plugin!
