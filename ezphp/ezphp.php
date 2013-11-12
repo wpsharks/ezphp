@@ -4,8 +4,8 @@ Version: 130924
 Text Domain: ezphp
 Plugin Name: ezPHP
 
-Author: s2Member® / WebSharks, Inc.
-Author URI: http://www.s2member.com
+Author URI: http://www.websharks-inc.com/
+Author: WebSharks, Inc. (Jason Caldwell)
 
 Plugin URI: http://www.s2member.com/kb/ezphp-plugin
 Description: Evaluates PHP tags in Posts (of any kind, including Pages); and also in text widgets. A very lightweight plugin!
