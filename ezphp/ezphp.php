@@ -13,14 +13,21 @@ Description: Evaluates PHP tags in Posts (of any kind, including Pages); and als
 if(!defined('WPINC')) // MUST have WordPress.
 	exit('Do NOT access this file directly: '.basename(__FILE__));
 
+if(!defined('EZPHP_INCLUDED_POST_TYPES')) define('EZPHP_INCLUDED_POST_TYPES', '');
 if(!defined('EZPHP_EXCLUDED_POST_TYPES')) define('EZPHP_EXCLUDED_POST_TYPES', '');
 
 class ezphp // PHP execution plugin for WordPress.
 {
-	public static $excluded_post_types = array();
+	public static $included_post_types = array(); // Inclusions array.
+	public static $excluded_post_types = array(); // Exclusions array.
 
 	public static function init() // Initialize plugin :-)
 		{
+			// load_plugin_textdomain('ezphp'); // Not necessary at this time.
+
+			if(EZPHP_INCLUDED_POST_TYPES) ezphp::$included_post_types = // ONE time only.
+				preg_split('/[\s;,]+/', EZPHP_INCLUDED_POST_TYPES, NULL, PREG_SPLIT_NO_EMPTY);
+
 			if(EZPHP_EXCLUDED_POST_TYPES) ezphp::$excluded_post_types = // ONE time only.
 				preg_split('/[\s;,]+/', EZPHP_EXCLUDED_POST_TYPES, NULL, PREG_SPLIT_NO_EMPTY);
 
@@ -31,10 +38,16 @@ class ezphp // PHP execution plugin for WordPress.
 
 	public static function filter($content_excerpt)
 		{
-			if(isset($GLOBALS['post']->post_type)) // Have the post type?
-				if(in_array($GLOBALS['post']->post_type, ezphp::$excluded_post_types, TRUE))
-					return $content_excerpt; // Exclude post type; e.g. do NOT evaluate.
+			if(($post_type = get_post_type())) // Check inclusions/exclusions.
+				{
+					if(ezphp::$included_post_types) // Specific inclusions?
+						if(!in_array($post_type, ezphp::$included_post_types, TRUE))
+							return $content_excerpt; // Exclude.
 
+					if(ezphp::$excluded_post_types) // Specific exclusions?
+						if(in_array($post_type, ezphp::$excluded_post_types, TRUE))
+							return $content_excerpt; // Exclude.
+				}
 			return ezphp::evaluate($content_excerpt);
 		}
 
