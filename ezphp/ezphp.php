@@ -42,9 +42,7 @@ class ezphp // PHP execution plugin for WordPress.
 
 	public static function filter($content_excerpt)
 		{
-			if(!empty($GLOBALS['is_snippet']))
-				$post_type = 'snippet'; // Special handling.
-			else $post_type = get_post_type();
+			$post_type = get_post_type();
 
 			if($post_type && ezphp::$included_post_types) // Specific inclusions?
 				if(!in_array($post_type, ezphp::$included_post_types, TRUE))
