@@ -78,7 +78,7 @@ class ezphp // PHP execution plugin for WordPress.
 
 	public static function activate()
 		{
-			// Not necessary at this time.
+			ezphp::init(); // Nothing more at this time.
 		}
 
 	public static function deactivate()
