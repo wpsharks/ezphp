@@ -15,6 +15,7 @@ if(!defined('WPINC')) // MUST have WordPress.
 
 if(!defined('EZPHP_INCLUDED_POST_TYPES')) define('EZPHP_INCLUDED_POST_TYPES', '');
 if(!defined('EZPHP_EXCLUDED_POST_TYPES')) define('EZPHP_EXCLUDED_POST_TYPES', '');
+add_action('init', 'ezphp::init', 1); // Initializes ezPHP :-)
 
 class ezphp // PHP execution plugin for WordPress.
 {
@@ -38,16 +39,18 @@ class ezphp // PHP execution plugin for WordPress.
 
 	public static function filter($content_excerpt)
 		{
-			if(($post_type = get_post_type())) // Check inclusions/exclusions.
-				{
-					if(ezphp::$included_post_types) // Specific inclusions?
-						if(!in_array($post_type, ezphp::$included_post_types, TRUE))
-							return $content_excerpt; // Exclude.
+			if(!empty($GLOBALS['is_snippet']))
+				$post_type = 'snippet'; // Special handling.
+			else $post_type = get_post_type();
 
-					if(ezphp::$excluded_post_types) // Specific exclusions?
-						if(in_array($post_type, ezphp::$excluded_post_types, TRUE))
-							return $content_excerpt; // Exclude.
-				}
+			if($post_type && ezphp::$included_post_types) // Specific inclusions?
+				if(!in_array($post_type, ezphp::$included_post_types, TRUE))
+					return $content_excerpt; // Exclude.
+
+			if($post_type && ezphp::$excluded_post_types) // Specific exclusions?
+				if(in_array($post_type, ezphp::$excluded_post_types, TRUE))
+					return $content_excerpt; // Exclude.
+
 			return ezphp::evaluate($content_excerpt);
 		}
 
@@ -72,5 +75,3 @@ class ezphp // PHP execution plugin for WordPress.
 			return $string; // All done :-)
 		}
 }
-
-add_action('init', 'ezphp::init', 1);
