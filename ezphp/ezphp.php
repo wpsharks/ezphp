@@ -7,7 +7,7 @@ Plugin Name: ezPHP
 Author URI: http://www.websharks-inc.com/
 Author: WebSharks, Inc. (Jason Caldwell)
 
-Plugin URI: http://www.s2member.com/kb/ezphp-plugin
+Plugin URI: http://www.websharks-inc.com/product/ezphp/
 Description: Evaluates PHP tags in Posts (of any kind, including Pages); and also in text widgets. A very lightweight plugin!
 */
 if(!defined('WPINC')) // MUST have WordPress.
