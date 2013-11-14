@@ -15,7 +15,6 @@ if(!defined('WPINC')) // MUST have WordPress.
 
 if(!defined('EZPHP_INCLUDED_POST_TYPES')) define('EZPHP_INCLUDED_POST_TYPES', '');
 if(!defined('EZPHP_EXCLUDED_POST_TYPES')) define('EZPHP_EXCLUDED_POST_TYPES', '');
-add_action('init', 'ezphp::init', 1); // Initializes ezPHP :-)
 
 class ezphp // PHP execution plugin for WordPress.
 {
@@ -24,13 +23,15 @@ class ezphp // PHP execution plugin for WordPress.
 
 	public static function init() // Initialize plugin :-)
 		{
-			// load_plugin_textdomain('ezphp'); // Not necessary at this time.
+			#load_plugin_textdomain('ezphp'); // Not necessary at this time.
 
-			if(EZPHP_INCLUDED_POST_TYPES) ezphp::$included_post_types = // ONE time only.
-				preg_split('/[\s;,]+/', EZPHP_INCLUDED_POST_TYPES, NULL, PREG_SPLIT_NO_EMPTY);
+			if(EZPHP_INCLUDED_POST_TYPES) // Specific Post Types?
+				ezphp::$included_post_types = // Convert these to an array.
+					preg_split('/[\s;,]+/', EZPHP_INCLUDED_POST_TYPES, NULL, PREG_SPLIT_NO_EMPTY);
 
-			if(EZPHP_EXCLUDED_POST_TYPES) ezphp::$excluded_post_types = // ONE time only.
-				preg_split('/[\s;,]+/', EZPHP_EXCLUDED_POST_TYPES, NULL, PREG_SPLIT_NO_EMPTY);
+			if(EZPHP_EXCLUDED_POST_TYPES) // Specific Post Types?
+				ezphp::$excluded_post_types = // Convert these to an array.
+					preg_split('/[\s;,]+/', EZPHP_EXCLUDED_POST_TYPES, NULL, PREG_SPLIT_NO_EMPTY);
 
 			add_filter('the_content', 'ezphp::filter', 1);
 			add_filter('get_the_excerpt', 'ezphp::filter', 1);
@@ -74,4 +75,18 @@ class ezphp // PHP execution plugin for WordPress.
 
 			return $string; // All done :-)
 		}
+
+	public static function activate()
+		{
+			// Not necessary at this time.
+		}
+
+	public static function deactivate()
+		{
+			// Not necessary at this time.
+		}
 }
+
+add_action('init', 'ezphp::init', 1);
+register_activation_hook(__FILE__, 'ezphp::activate');
+register_deactivation_hook(__FILE__, 'ezphp::deactivate');
