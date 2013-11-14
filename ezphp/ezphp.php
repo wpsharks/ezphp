@@ -28,10 +28,12 @@ class ezphp // PHP execution plugin for WordPress.
 			if(EZPHP_INCLUDED_POST_TYPES) // Specific Post Types?
 				ezphp::$included_post_types = // Convert these to an array.
 					preg_split('/[\s;,]+/', EZPHP_INCLUDED_POST_TYPES, NULL, PREG_SPLIT_NO_EMPTY);
+			ezphp::$included_post_types = apply_filters('ezphp_included_post_types', ezphp::$included_post_types);
 
 			if(EZPHP_EXCLUDED_POST_TYPES) // Specific Post Types?
 				ezphp::$excluded_post_types = // Convert these to an array.
 					preg_split('/[\s;,]+/', EZPHP_EXCLUDED_POST_TYPES, NULL, PREG_SPLIT_NO_EMPTY);
+			ezphp::$excluded_post_types = apply_filters('ezphp_excluded_post_types', ezphp::$excluded_post_types);
 
 			add_filter('the_content', 'ezphp::filter', 1);
 			add_filter('get_the_excerpt', 'ezphp::filter', 1);
