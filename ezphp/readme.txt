@@ -46,7 +46,7 @@ You can use `<!php !>` when writing code samples, to avoid having certain PHP ta
 
 = ezPHP is very easy to install (instructions) =
 1. Upload the `/ezphp` folder to your `/wp-content/plugins/` directory.
-2. Activate the plugin through the `Plugins` menu in WordPress®.
+2. Activate the plugin through the **Plugins** menu in WordPress®.
 3. Use PHP tags in your Posts/Pages/Widgets.
 
 == Changelog ==
