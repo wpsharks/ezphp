@@ -16,7 +16,7 @@ Evaluates PHP tags in Posts (of any kind, including Pages); and also in text wid
 
 == Description ==
 
-This plugin is VERY simple. There are only two configurable option. You can define these PHP constants inside your `/wp-config.php` file (optional).
+This plugin is VERY simple; only two configurable option. You can define these PHP constants inside your `/wp-config.php` file (optional).
 
 	define('EZPHP_INCLUDED_POST_TYPES', '');
 	// Comma-delimited list of Post Types to include (excluding all others).
@@ -34,11 +34,11 @@ Note: this implies all other Post Types will be included; unless you list them h
 
 	define('EZPHP_EXCLUDED_POST_TYPES', 'post');
 
-#### Writing PHP Code into a Post/Page or Text Widget.
+= Writing PHP Code into a Post/Page or Text Widget. =
 
 You can use regular `<?php ?>` tags; OR you can use `[php][/php]` shortcode tags.
 
-#### Quick Tip: Writing PHP Code Samples?
+= Quick Tip: Writing PHP Code Samples? =
 
 You can use `<!php !>` when writing code samples, to avoid having certain PHP tags evaulated. When you write `<!php !>`, it is translated into `<?php ?>` in the final output; but never actually evaluated by the internal PHP parser. Of course, it's ALSO possible to accomplish this with HTML entities; e.g. `&lt;?php ?&gt;`.
 
@@ -62,4 +62,4 @@ You can use `<!php !>` when writing code samples, to avoid having certain PHP ta
 
 = v130123 =
 
- * Initial release.
+* Initial release.
