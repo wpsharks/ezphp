@@ -20,7 +20,7 @@ ezPHP brings the power of `<?php ?>` tags into WordPress; or you can use `[php][
 
 ---
 
-= This plugin is VERY simple; only two configurable options. =
+= This Plugin is VERY Simple; only Two Configurable Options =
 
 You can define these PHP constants inside your `/wp-config.php` file (optional).
 
@@ -49,7 +49,7 @@ Or, if you don't want PHP tags evaluated in Posts; e.g. in the `post` type.
 
 ---
 
-= Writing PHP Code into a Post/Page or Text Widget. =
+= Writing PHP Code into a Post/Page or Text Widget =
 
 You can use regular `<?php ?>` tags; OR you can use `[php][/php]` shortcode tags.
 
