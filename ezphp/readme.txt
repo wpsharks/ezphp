@@ -20,7 +20,9 @@ ezPHP brings the power of `<?php ?>` tags into WordPress; or you can use `[php][
 
 ---
 
-= This plugin is VERY simple; only two configurable options. You can define these PHP constants inside your `/wp-config.php` file (optional). =
+= This plugin is VERY simple; only two configurable options. =
+
+You can define these PHP constants inside your `/wp-config.php` file (optional).
 
 	<?php
 	define('EZPHP_INCLUDED_POST_TYPES', '');
@@ -29,17 +31,23 @@ ezPHP brings the power of `<?php ?>` tags into WordPress; or you can use `[php][
 	define('EZPHP_EXCLUDED_POST_TYPES', '');
 	// Comma-delimited list of Post Types to exclude (including all others).
 
-= For instance, if you want PHP tags evaluated only in Pages; e.g. in the `page` type. =
+---
+
+For instance, if you want PHP tags evaluated only in Pages; e.g. in the `page` type.
 
 	<?php
 	define('EZPHP_INCLUDED_POST_TYPES', 'page');
 	// Unless included here; all other Post Types will be excluded now.
 
-= Or, if you don't want PHP tags evaluated in Posts; e.g. in the `post` type. =
+---
+
+Or, if you don't want PHP tags evaluated in Posts; e.g. in the `post` type.
 
 	<?php
 	define('EZPHP_EXCLUDED_POST_TYPES', 'post');
 	// Unless excluded here; all other Post Types will be included now.
+
+---
 
 = Writing PHP Code into a Post/Page or Text Widget. =
 
