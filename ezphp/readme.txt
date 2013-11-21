@@ -49,6 +49,27 @@ You can use `<!php !>` when writing code samples, to avoid having certain PHP ta
 2. Activate the plugin through the **Plugins** menu in WordPress®.
 3. Use PHP tags in your Posts/Pages/Widgets.
 
+== License ==
+
+Copyright: © 2013 [WebSharks, Inc.](http://www.websharks-inc.com/bizdev/) (coded in the USA)
+
+Released under the terms of the [GNU General Public License](http://www.gnu.org/licenses/gpl-2.0.html).
+
+= Credits / Additional Acknowledgments =
+
+* Software designed for WordPress®.
+	- GPL License <http://codex.wordpress.org/GPL>
+	- WordPress® <http://wordpress.org>
+* Some JavaScript extensions require jQuery.
+	- GPL-Compatible License <http://jquery.org/license>
+	- jQuery <http://jquery.com/>
+* CSS framework and some JavaScript functionality provided by Bootstrap.
+	- GPL-Compatible License <http://getbootstrap.com/getting-started/#license-faqs>
+	- Bootstrap <http://getbootstrap.com/>
+* Icons provided by Font Awesome.
+	- GPL-Compatible License <http://fortawesome.github.io/Font-Awesome/license/>
+	- Font Awesome <http://fortawesome.github.io/Font-Awesome/>
+
 == Changelog ==
 
 = v130924 =
