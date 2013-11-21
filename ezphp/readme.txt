@@ -1,6 +1,6 @@
 === ezPHP for WordPress ===
 
-Stable tag: 130924
+Stable tag: 131121
 Requires at least: 3.3
 Tested up to: 3.7.1
 Text Domain: ezphp
@@ -87,6 +87,11 @@ Released under the terms of the [GNU General Public License](http://www.gnu.org/
 	- Font Awesome <http://fortawesome.github.io/Font-Awesome/>
 
 == Changelog ==
+
+= v131121 =
+
+* General code cleanup and optimizations.
+* Adding a new config constant: `EZPHP_INCLUDED_POST_TYPES`. See readme file for details.
 
 = v130924 =
 

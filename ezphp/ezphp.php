@@ -1,6 +1,6 @@
 <?php
 /*
-Version: 130924
+Version: 131121
 Text Domain: ezphp
 Plugin Name: ezPHP
 
@@ -8,7 +8,7 @@ Author URI: http://www.websharks-inc.com/
 Author: WebSharks, Inc. (Jason Caldwell)
 
 Plugin URI: http://www.websharks-inc.com/product/ezphp/
-Description: Evaluates PHP tags in Posts (of any kind, including Pages); and also in text widgets. A very lightweight plugin!
+Description: Evaluates PHP tags in Posts (of any kind, including Pages); and in text widgets. Very lightweight; plus it supports `[php][/php]` shortcodes!
 */
 if(!defined('WPINC')) // MUST have WordPress.
 	exit('Do NOT access this file directly: '.basename(__FILE__));
