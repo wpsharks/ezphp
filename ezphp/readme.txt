@@ -12,7 +12,7 @@ Contributors: WebSharks
 Donate link: http://www.websharks-inc.com/r/wp-theme-plugin-donation/
 Tags: post, pages, posts, code, php, eval, exec, eval php, exec php, easy php, ez php, variables
 
-Evaluates PHP tags in Posts (of any kind, including Pages); and in text widgets. Very lightweight!
+Evaluates PHP tags in Posts (of any kind, including Pages); and in text widgets. Very lightweight; plus it supports `[php][/php]` shortcodes!
 
 == Description ==
 
@@ -28,12 +28,16 @@ This plugin is VERY simple; only two configurable option. You can define these P
 For instance, if you want PHP tags evaluated only in Pages; e.g. in the `page` type.
 Note: this implies all other Post Types will be excluded.
 
+	<?php
 	define('EZPHP_INCLUDED_POST_TYPES', 'page');
+	// Unless included here; all other Post Types will be excluded now.
 
 Or, if you don't want PHP tags evaluated in Posts; e.g. in the `post` type.
 Note: this implies all other Post Types will be included.
 
+	<?php
 	define('EZPHP_EXCLUDED_POST_TYPES', 'post');
+	// Unless excluded here; all other Post Types will be included now.
 
 = Writing PHP Code into a Post/Page or Text Widget. =
 
