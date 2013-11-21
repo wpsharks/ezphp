@@ -16,6 +16,8 @@ Evaluates PHP tags in Posts (of any kind, including Pages); and in text widgets.
 
 == Description ==
 
+ezPHP brings the power of `<?php ?>` tags into WordPress; or you can use `[php][/php]` shortcode tags (recommended for the WP Visual Editor; this is generally the best approach). PHP tags can be extremely useful when there is logic that needs to be worked out before certain portions of your content are displayed under certain scenarios. It's also helpful when/if there are portions of your content that need to be more dynamic. Some developers even use this to pull external files into WordPress Posts/Pages (via `include` or `require`), making development easier for advanced site owners.
+
 This plugin is VERY simple; only two configurable option. You can define these PHP constants inside your `/wp-config.php` file (optional).
 
 	<?php
@@ -40,6 +42,8 @@ Or, if you don't want PHP tags evaluated in Posts; e.g. in the `post` type.
 	<?php
 	define('EZPHP_EXCLUDED_POST_TYPES', 'post');
 	// Unless excluded here; all other Post Types will be included now.
+
+---
 
 = Writing PHP Code into a Post/Page or Text Widget. =
 
