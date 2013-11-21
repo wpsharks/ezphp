@@ -55,7 +55,7 @@ You can use regular `<?php ?>` tags; OR you can use `[php][/php]` shortcode tags
 
 = Quick Tip: Writing PHP Code Samples? =
 
-You can use `<!php !>` when writing code samples, to avoid having certain PHP tags evaulated. When you write `<!php !>`, it is translated into `<?php ?>` in the final output; but never actually evaluated by the internal PHP parser. Of course, it's ALSO possible to accomplish this with HTML entities; e.g. `&lt;?php ?&gt;`.
+You can use `<!php !>` when writing code samples, to avoid having certain PHP tags evaulated. When you write `<!php !>`, it is translated into `<?php ?>` in the final output; but never executed. Of course, it's ALSO possible to accomplish this with HTML entities; e.g. `&lt;?php ?&gt;`.
 
 == Installation ==
 
