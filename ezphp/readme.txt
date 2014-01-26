@@ -2,13 +2,13 @@
 
 Stable tag: 131121
 Requires at least: 3.3
-Tested up to: 3.7.1
+Tested up to: 3.8
 Text Domain: ezphp
 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Contributors: WebSharks
+Contributors: WebSharks, JasWSInc
 Donate link: http://www.websharks-inc.com/r/wp-theme-plugin-donation/
 Tags: post, pages, posts, code, php, eval, exec, eval php, exec php, easy php, ez php, variables, conditionals
 
