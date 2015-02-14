@@ -18,12 +18,12 @@ if(!defined('EZPHP_EXCLUDED_POST_TYPES')) define('EZPHP_EXCLUDED_POST_TYPES', ''
 
 class ezphp // PHP execution plugin for WordPress.
 {
-	public static $included_post_types = array(); // Inclusions array.
-	public static $excluded_post_types = array(); // Exclusions array.
+	public static $included_post_types = array();
+	public static $excluded_post_types = array();
 
-	public static function init() // Initialize plugin :-)
+	public static function init() // Initialize plugin.
 	{
-		#load_plugin_textdomain('ezphp'); // Not necessary at this time.
+		#load_plugin_textdomain('ezphp'); // Not necessary.
 
 		if(EZPHP_INCLUDED_POST_TYPES) // Specific Post Types?
 			ezphp::$included_post_types = // Convert these to an array.
@@ -42,18 +42,17 @@ class ezphp // PHP execution plugin for WordPress.
 
 	public static function filter($content_excerpt)
 	{
-		$post_id   = get_the_ID();
-		$post_type = get_post_type();
+		$post = get_post(); // Current post.
 
-		if($post_type && ezphp::$included_post_types) // Specific inclusions?
-			if(!in_array($post_type, ezphp::$included_post_types, TRUE))
+		if($post && $post->post_type && ezphp::$included_post_types)
+			if(!in_array($post->post_type, ezphp::$included_post_types, TRUE))
 				return $content_excerpt; // Exclude.
 
-		if($post_type && ezphp::$excluded_post_types) // Specific exclusions?
-			if(in_array($post_type, ezphp::$excluded_post_types, TRUE))
+		if($post && $post->post_type && ezphp::$excluded_post_types)
+			if(in_array($post->post_type, ezphp::$excluded_post_types, TRUE))
 				return $content_excerpt; // Exclude.
 
-		if(apply_filters('ezphp_exclude_post', FALSE, $post_id))
+		if(apply_filters('ezphp_exclude_post', FALSE, $post))
 			return $content_excerpt; // Exclude.
 
 		return ezphp::evaluate($content_excerpt);
@@ -77,7 +76,7 @@ class ezphp // PHP execution plugin for WordPress.
 		if(stripos($string, '!php') !== FALSE) // PHP code samples; e.g. <!php !> tags.
 			$string = preg_replace(array('/\< ?\!php(\s+)/i', '/(\s+)\!\>/'), array('<?php${1}', '${1}?>'), $string);
 
-		return $string; // All done :-)
+		return $string; // All done.
 	}
 
 	public static function activate()
