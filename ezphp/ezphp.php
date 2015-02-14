@@ -42,6 +42,7 @@ class ezphp // PHP execution plugin for WordPress.
 
 	public static function filter($content_excerpt)
 	{
+		$post_id   = get_the_ID();
 		$post_type = get_post_type();
 
 		if($post_type && ezphp::$included_post_types) // Specific inclusions?
@@ -51,6 +52,9 @@ class ezphp // PHP execution plugin for WordPress.
 		if($post_type && ezphp::$excluded_post_types) // Specific exclusions?
 			if(in_array($post_type, ezphp::$excluded_post_types, TRUE))
 				return $content_excerpt; // Exclude.
+
+		if(apply_filters('ezphp_exclude_post', FALSE, $post_id))
+			return $content_excerpt; // Exclude.
 
 		return ezphp::evaluate($content_excerpt);
 	}
