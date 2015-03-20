@@ -40,7 +40,7 @@ class ezphp // PHP execution plugin for WordPress.
 
 		add_filter('the_content', 'ezphp::filter', 1);
 		add_filter('get_the_excerpt', 'ezphp::filter', 1);
-		add_filter('widget_text', 'ezphp::evaluate', 1);
+		add_filter('widget_text', 'ezphp::maybe_eval', 1);
 	}
 
 	public static function filter($content_excerpt)
