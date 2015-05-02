@@ -55,7 +55,7 @@ class ezphp // PHP execution plugin for WordPress.
 			if(in_array($post->post_type, ezphp::$excluded_post_types, TRUE))
 				return $content_excerpt; // Exclude.
 
-		if(apply_filters('ezphp_exclude_post', FALSE, $post))
+		if($post && apply_filters('ezphp_exclude_post', FALSE, $post))
 			return $content_excerpt; // Exclude.
 
 		return ezphp::maybe_eval($content_excerpt);
