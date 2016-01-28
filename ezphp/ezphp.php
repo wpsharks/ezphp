@@ -1,10 +1,10 @@
 <?php
 /*
-Version: 150214
+Version: 160128
 Text Domain: ezphp
 Plugin Name: ezPHP
 
-Author URI: http://www.websharks-inc.com/
+Author URI: http://websharks-inc.com/
 Author: WebSharks, Inc. (Jason Caldwell)
 
 Plugin URI: http://www.websharks-inc.com/product/ezphp/

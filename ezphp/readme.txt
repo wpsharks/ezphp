@@ -1,8 +1,8 @@
 === ezPHP for WordPress ===
 
-Stable tag: 150214
+Stable tag: 160128
 Requires at least: 3.3
-Tested up to: 4.2-alpha
+Tested up to: 4.5-alpha
 Text Domain: ezphp
 
 License: GPLv2 or later
@@ -87,6 +87,10 @@ Released under the terms of the [GNU General Public License](http://www.gnu.org/
 	- Font Awesome <http://fortawesome.github.io/Font-Awesome/>
 
 == Changelog ==
+
+= v160128 =
+
+- Improving support for PHP mixed with Markdown for themes that use Markdown.
 
 = v150214 =
 
