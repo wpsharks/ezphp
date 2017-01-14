@@ -2,7 +2,7 @@
 
 Stable tag: 160128
 Requires at least: 3.3
-Tested up to: 4.5-alpha
+Tested up to: 4.8-alpha
 Text Domain: ezphp
 
 License: GPLv2 or later
