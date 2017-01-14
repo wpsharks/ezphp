@@ -10,8 +10,8 @@ Author: WebSharks, Inc. (Jason Caldwell)
 Plugin URI: http://www.websharks-inc.com/product/ezphp/
 Description: Evaluates PHP tags in Posts (of any kind, including Pages); and in text widgets. Very lightweight; plus it supports `[php][/php]` shortcodes!
 */
-if(!defined('WPINC')) // MUST have WordPress.
-	exit('Do NOT access this file directly: '.basename(__FILE__));
+if(!defined('WPINC'))
+	exit('Do NOT access this file directly.');
 
 if(!defined('EZPHP_INCLUDED_POST_TYPES')) define('EZPHP_INCLUDED_POST_TYPES', '');
 if(!defined('EZPHP_EXCLUDED_POST_TYPES')) define('EZPHP_EXCLUDED_POST_TYPES', '');
